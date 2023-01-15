@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="card text-dark bg-info mb-3">
+        <div class="card-header h2">ユーザー情報</div>
+        <div class="card-body">
+        <h5 class="card-title">ユーザー名</h5>
+        {% if current_user.is_authenticated %}
+            <span class="card-text">
+            {{current_user.username}}
+            </span>
+        {% endif %}
+        <h5 class="card-title">メールアドレス</h5>
+        {% if current_user.is_authenticated %}
+            <span class="card-text">
+            {{current_user.email}}
+            </span>
+        {% endif %}
+    </div>
+{% endblock %}

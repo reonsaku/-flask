@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>登録が完了いたしました！</h1>
+<a class="h2 {% if request.endpoint == 'users.login' %}active{% endif %}" href="{{ url_for('users.login') }}">ログインしてください。</a>
+{% endblock %}
